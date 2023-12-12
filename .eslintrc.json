@@ -1,3 +1,6 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "react/no-unescaped-entities": "off" //wont check for use of apostrophe in text like "I'm" which may potentially confuse the compiler
+  }
 }
