@@ -64,7 +64,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "Tailwind", "Framer Motion"],
     icons: [reactIcon, nextJSIcon, tailwindIcon, framerIcon],
     imageUrl: corpcommentImg, //to change
-    link: "https:www.google.com" // to change
+    link: "https://github.com/casperngeen/portfolio-website"
   }
 ] as const;
 
