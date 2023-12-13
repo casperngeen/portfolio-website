@@ -54,7 +54,7 @@ export default function Intro() {
                     Contact me here <BsArrowRight className="opacity-70 group-hover: translate-x-1 transition" />
                 </Link>
 
-                <a className='group flex px-7 py-3 bg-white rounded-full gap-2 items-center outline-none focus:scale-100 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack' href="/CV.pdf" download={true}>
+                <a className='group flex px-7 py-3 bg-white rounded-full gap-2 items-center outline-none focus:scale-100 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack' href="/Resume.pdf" download={true}>
                     Download CV <HiDownload/>
                 </a>
 
