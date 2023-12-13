@@ -12,7 +12,7 @@ export default function Experience() {
     const { ref } = useSectionInView("Experience", 0.5);
 
     return (
-        <section id="experience" ref={ref} className='scroll-mt-28 mb-28 sm:mb-40'>
+        <section id="experience" ref={ref} className='scroll-mt-28 mb-28 sm:mb-40 mx-10'>
             <SectionHeading>My experience</SectionHeading>
             <VerticalTimeline lineColor=''>
                 {experiencesData.map((item, index) => (

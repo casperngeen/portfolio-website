@@ -19,9 +19,9 @@ export default function Contacts() {
   // async: defines a function that contains asynchronous code (ie the function wll return a promise)
   // await: used within async functions to wait for the resolution of a Promise
   return (
-    <motion.section ref={ref} id="contact" className="mb-20 sm:mb-28 w-[min(100%, 38rem)] text-center" initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration: 1}} viewport={{once:true}} >
+    <motion.section ref={ref} id="contact" className="mb-20 sm:mb-28 w-[min(100%, 38rem)] text-center mx-10" initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration: 1}} viewport={{once:true}} >
         <SectionHeading>Contact Me</SectionHeading>
-        <p className='text-gray-700 -mt-5'>Please contact me at <a className="underline" href="mailto:e1121036@u.nus.edu">e1121036@u.nus.edu</a> or through this form.</p>
+        <p className='text-gray-700 -mt-5'>Please contact me at <a className="underline" href="mailto:e1121036@u.nus.edu">casperngeen@gmail.com</a> or through this form.</p>
         <form className='mt-10 flex flex-col' action={async (formData) => {
           const {data, error} = await sendEmail(formData); //the function will return either data (if successful) or error (if unsuccessful)
           if (error) {

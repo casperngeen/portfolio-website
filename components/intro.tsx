@@ -26,7 +26,7 @@ export default function Intro() {
         // a (anchor) vs button: anchor tags are for navigating to different routes, while buttons are more for interaction with the web page
         // nextJS will automatically look for static files in the public directory
         // scroll-mt-[100rem]: 100rem is an arbritrary value, we just need any sufficiently large value to flush the section to the very top
-        <section ref={ref} className='mb-28 max-w-[50rem] text-center sm:mb-40 scroll-mt-[100rem]' id="home">
+        <section ref={ref} className='mb-28 max-w-[50rem] text-center sm:mb-40 scroll-mt-[100rem] mx-10' id="home">
             <div className="flex items-center justify-center relative">
                 <div className='relative'>
                     <motion.div initial={{ opacity: 0, scale:0 }} animate={{ opacity: 1, scale: 1 }} transition = {{ type: "tween", duration: 0.2}}>

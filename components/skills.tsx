@@ -30,7 +30,7 @@ export default function Skills() {
     // whileInView: 
     // viewport: 
     // custom: 
-        <section ref={ref} id="skills" className='mb-28 max-w-[53rem] text-center leading-8 sm:mb-40 scroll-mt-28'>
+        <section ref={ref} id="skills" className='mb-28 max-w-[53rem] text-center leading-8 sm:mb-40 scroll-mt-28 mx-10'>
             <SectionHeading>My skills</SectionHeading>
             <ul className="flex flex-wrap justify-center text-lg gap-2 text-gray-800">
                 {

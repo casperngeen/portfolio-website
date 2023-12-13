@@ -14,7 +14,7 @@ export default function Projects() {
         // we have to assign the same id as the hash value for each section, so when we click on the navbar it will route as to the correct section
         // scroll-mt: styles the container with some amrgin when it is being scrolled to that container
 
-        <section ref={ref} id="projects" className="mb-28 sm:mb-40 scroll-mt-28">
+        <section ref={ref} id="projects" className="mb-28 sm:mb-40 scroll-mt-28 mx-10">
             <SectionHeading>My projects</SectionHeading>
             <div>
                 {

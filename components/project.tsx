@@ -20,7 +20,7 @@ type ProjectProps = typeof projectsData[number];
 // useScroll: returns 4 motion values (a motion value is a mutable value that is used for animating properties) - scrollX/Y (absolute value in pixels) and scrollX/YProgress (range from 0-1) 
 // useRef: set a mutable object reference that persists across renders but it does not trigger re-renders when updated
 // const { x } = object => destructures the object and extracts the x property from it
-export default function Project({title, description, icons, imageUrl, link}: ProjectProps) {
+export default function Project({title, description, tags, imageUrl, link}: ProjectProps) {
     //ref is initially set to null, but when it is attached to the ref prop in a div, its value (ref.current) will be updated
     const ref = useRef<HTMLDivElement>(null);
     
@@ -36,20 +36,19 @@ export default function Project({title, description, icons, imageUrl, link}: Pro
     return (
     <Link href={link} target="_blank">
         <motion.div ref={ref} style={{scale: scaleProgress, opacity: opacityProgress }} className="group mb-3 sm:mb-10 last:mb-0">
-            <section className='bg-gray-100 max-w-[42rem] border-black/5 overflow-hidden sm:pr-8 relative rounded-lg sm:h-[20rem] hover:bg-gray-200 transition'>
-            <div className='pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full group-even:ml-[20rem]'>
+            <section className='bg-gray-100 max-w-[42rem] border-black/5 overflow-hidden sm:pr-8 relative rounded-lg hover:bg-gray-200 transition'>
+            <div className='pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 max-w-[50%] flex flex-col h-full group-even:ml-[20rem]'>
                 <h3 className='text-2xl font-semibold'>{title}</h3>
                 <p className='mt-2 leading-relaxed text-gray-700'>{description}</p>
-                <p className="bg-gray-200 text-sm rounded-full text-center mt-auto text-gray-700 max-w-[8rem]">Tech Stack</p>
-                <ul className='flex flex-wrap gap-3 sm:mt-auto'>
-                    {icons.map((icon, index) => (
-                        <Image key={index} src={icon} alt="Icon" height={35} width={35}/>
+                <ul className='flex flex-wrap gap-3 mt-5'>
+                    {tags.map((tag, index) => (
+                        <li key={index} className="text-xs gap-1 text-gray-700 font-mono">{tag}</li>
                     ))}
                 </ul>
             </div>
             
             <Image src={imageUrl} alt="Project I worked on" quality={95} 
-                className='absolute top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl 
+                className='absolute top-8 -right-40 w-[80%] sm:w-[28.25rem] rounded-t-lg shadow-2xl  
                         group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2
                         group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2
                         group-even:right-[initial] group-even:-left-40 transition'/>
